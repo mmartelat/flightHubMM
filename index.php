@@ -1,11 +1,11 @@
 <?php
 
 header('Content-Type: application/json');
+
 require_once ("FlightRestHandler.php");
 require_once ("utils.php");
 
 $flights_rest_handler = new FlightRestHandler();
-
 if(!empty($_GET['departure_location']) && empty($_GET['arrival_location']) && empty($_GET['two_way'])){// Endpoint - city departure
   $flights_rest_handler->getFlightsByCityDeparture($_GET['departure_location'], $_GET['departure_date']);
 }elseif(!empty($_GET['departure_location']) && !empty($_GET['arrival_location']) && empty($_GET['round_trip'])) { // Endpoint - city departure and arrival one-way

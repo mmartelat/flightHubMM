@@ -1,9 +1,8 @@
 <?php
-require_once("SimpleRest.php");
 require_once("Flights.php");
 require_once ("utils.php");
 		
-class FlightRestHandler extends SimpleRest {
+class FlightRestHandler {
     /***
      * 
      * Return all the flights that leave from the city requested at the date informed. 
