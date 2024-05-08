@@ -18,15 +18,15 @@
     "timezone": "America/Montreal"
     },
     {
-        "code": "YYZ",
-        "city_code": "YTO",
-        "name": "Toronto Pearson International Airport",
-        "city": "Toronto",
-        "country_code": "CA",
-        "region_code": "ON",
-        "latitude": 45.457714,
-        "longitude": -73.749908,
-        "timezone": "America/Toronto"
+    "code": "YYZ",
+    "city_code": "YTO",
+    "name": "Toronto Pearson International Airport",
+    "city": "Toronto",
+    "country_code": "CA",
+    "region_code": "ON",
+    "latitude": 45.457714,
+    "longitude": -73.749908,
+    "timezone": "America/Toronto"
     },
     {
     "code": "YVR",

@@ -1,12 +1,32 @@
 <?php
-function create_reponse_json($code, $data, $msg=NULL) {
+
+/***
+ * 
+ * This function an array to encode in json
+ * 
+ * @param String $code status du retour
+ * @param String $msg error or succes message
+ * @param Array $array 
+ * @return array with three keys : code, msg, results
+ * 
+ */
+function create_reponse_json($code, $res, $msg=NULL) {
 	$array['code'] = $code;
 	$array['msg'] = $msg;
-	$array['result'] = $data;
+	$array['result'] = $res;
 
 	return($array);
 }
 
+
+/***
+ * 
+ * This function check if the date as the right format Y-m-d
+ * 
+ * @param String $dateString date to check
+ * @param Boolean 
+ * 
+ */
 function checkDateFormat($dateString){
     $format = "Y-m-d";
 
@@ -19,6 +39,14 @@ function checkDateFormat($dateString){
     }
 }
 
+/***
+ * 
+ * This function check if the date is less than a year from now
+ * 
+ * @param String $dateString date to check
+ * @param Boolean 
+ * 
+ */
 function checkDateTime($dateString){
     $inputDateTime = new DateTime($dateString);
 
@@ -33,6 +61,14 @@ function checkDateTime($dateString){
     }
 }
 
+/***
+ * 
+ * This function check format and time of a date
+ * 
+ * @param String $dateString date to check
+ * @param Boolean 
+ * 
+ */
 function checkInputDate($date){
     $res=NULL;
     if(!empty($date) && !checkDateFormat($date)){
@@ -43,6 +79,15 @@ function checkInputDate($date){
     return $res;
 }
 
+/***
+ * 
+ * This function check if two date are the same
+ * 
+ * @param String $dateStringDeparture date departure to check
+ * @param String $dateStringArrivl date arrival to check
+ * @param Boolean 
+ * 
+ */
 function isInputDateEqual($dateStringDeparture, $dateStringArrivl){
     $inputDateTimeDeparture = new DateTime($dateStringDeparture);
     $inputDateTimeArrival = new DateTime($dateStringArrivl);
